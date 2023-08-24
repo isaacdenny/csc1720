@@ -1,3 +1,14 @@
+/**************
+ * Programmer: Isaac Denny
+ * Course: CSC1720 Section 1
+ * Date: August 24, 2023
+ * Path: /home/students/idenny/csc1720/lab1/partc.cpp
+ * Description: This program asks for pay rate and hours worked and calculates some values off of it
+ * Help received: None!
+ * Compile: g++ partc.cpp
+ * Execute: ./a.out
+*************/
+
 #include <iostream>
 #include <iomanip>
 using namespace std;
