@@ -24,7 +24,7 @@ int main() {
   total = 5 * hoursPerWeek * payPerHour;
   totalAfterTaxes = total - (total * 0.14);
   clothesMoney = totalAfterTaxes * 0.1;
-  schoolSupplies = totalAfterTaxes * 0.3;
+  schoolSupplies = totalAfterTaxes * 0.03;
   savingsBonds = (totalAfterTaxes - clothesMoney - schoolSupplies) * 0.25;
   parentsContribution = savingsBonds * 0.5;
 
