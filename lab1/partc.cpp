@@ -21,7 +21,7 @@ int main() {
   cout << "Enter the number of hours per week> ";
   cin >> hoursPerWeek;
 
-  total = 10 * hoursPerWeek * payPerHour;
+  total = 5 * hoursPerWeek * payPerHour;
   totalAfterTaxes = total - (total * 0.14);
   clothesMoney = totalAfterTaxes * 0.1;
   schoolSupplies = totalAfterTaxes * 0.3;
