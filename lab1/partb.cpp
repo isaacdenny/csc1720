@@ -7,6 +7,8 @@ int main() {
   double payPerHour;
   int hoursPerWeek;
   double total;
+  double totalAfterTaxes;
+  double foodMoney;
 
   cout << "Welcome to Summer Job Calculator";
   cout << endl;
@@ -17,11 +19,24 @@ int main() {
   cin >> hoursPerWeek;
 
   total = 10 * hoursPerWeek * payPerHour;
+  totalAfterTaxes = total * 0.82;
+  foodMoney = totalAfterTaxes * 0.2;
 
   cout << endl;
   cout << endl;
-  cout << "For all 10 weeks, you will be paid $";
+  cout << "For all 10 weeks, your gross pay will be $";
   cout << total;
+  cout << endl;
+  cout << "After taxes, your net income is $";
+  cout << totalAfterTaxes;
+  cout << endl;
+  cout << "You set aside $";
+  cout << foodMoney;
+  cout << " for food.";
+  cout << endl;
+  cout << "You have $";
+  cout << totalAfterTaxes - foodMoney;
+  cout << " for spending money.";
   cout << endl;
 
   return 0;
