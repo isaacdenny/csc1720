@@ -5,8 +5,9 @@
 using namespace std;
 
 int main() {
-	int num1;
-	int num2;
+	string firstName;
+	string lastName;
+	double oldPay;
 	ifstream inFile;
 	ofstream outFile;
 	string inputFileName;
@@ -15,13 +16,18 @@ int main() {
 	cin >> inputFileName;
 
 	inFile.open(inputFileName);
-	outFile.open("outputFile.txt");
+	outFile.open("PayReport.txt");
+
+	outFile << "Last First Old Pay New Pay";
 
 	while (!inFile.eof()) {
-		inFile >> num1;
-		inFile >> num2;
-		int sum = num1 + num2;
-		cout << num1 << " + " << num2 << " = " << sum << endl;
+		inFile >> firstName;
+		inFile >> lastName;
+		inFile >> oldPay;
+		
+		double newPay = oldPay * 1.08f;
+
+		outFile << lastName + ", " + firstName << oldPay << newPay << endl;
 	}
 
 	inFile.close();
