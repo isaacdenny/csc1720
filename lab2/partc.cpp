@@ -18,7 +18,7 @@ int main() {
 	inFile.open(inputFileName);
 	outFile.open("PayReport.txt");
 
-	outFile << left << setw(12) << "Last"  << setw(11) << "First" << setw(12) << right << "Old Pay" << setw(12) << "New Pay" << endl;
+	outFile << left << setw(12) << "Last"  << setw(11) << "First" << setw(12) << "Old Pay" << setw(12) << "New Pay" << endl;
 	outFile << left << setw(12) << "-----------" << setw(11) << "---------" << setw(12) << right << "----------" << setw(12) << "----------" << endl;
 	outFile << fixed << showpoint << setprecision(2);
 
