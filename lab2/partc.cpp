@@ -5,7 +5,6 @@
 using namespace std;
 
 int main() {
-	cout << fixed << showpoint << setprecision(2);
 	string firstName;
 	string lastName;
 	double oldPay;
@@ -21,6 +20,7 @@ int main() {
 
 	outFile << left << setw(12) << "Last"  << setw(8) << "First" << setw(10) << right << "Old Pay" << setw(10) << "New Pay" << endl;
 	outFile << left << setw(12) << "-----------" << setw(8) << "-----" << setw(10) << right << "--------" << setw(10) << "--------" << endl;
+	outFile << fixed << showpoint << setprecision(2);
 
 	while (!inFile.eof()) {
 		inFile >> firstName;
