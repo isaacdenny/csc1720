@@ -18,8 +18,8 @@ int main() {
 	inFile.open(inputFileName);
 	outFile.open("PayReport.txt");
 
-	outFile << left << setw(12) << "Last"  << setw(8) << "First" << setw(10) << right << "Old Pay" << setw(10) << "New Pay" << endl;
-	outFile << left << setw(12) << "-----------" << setw(8) << "-----" << setw(10) << right << "--------" << setw(10) << "--------" << endl;
+	outFile << left << setw(12) << "Last"  << setw(12) << "First" << setw(12) << right << "Old Pay" << setw(12) << "New Pay" << endl;
+	outFile << left << setw(12) << "-----------" << setw(12) << "---------" << setw(12) << right << "----------" << setw(12) << "----------" << endl;
 	outFile << fixed << showpoint << setprecision(2);
 
 	while (!inFile.eof()) {
@@ -28,7 +28,7 @@ int main() {
 		inFile >> oldPay;
 		
 		double newPay = oldPay * 1.08f;
-		outFile << left << setw(12) << lastName + "," << setw(8) << firstName << setw(10) << right << oldPay << setw(10) << newPay << endl;
+		outFile << left << setw(12) << lastName + "," << setw(12) << firstName << setw(12) << right << oldPay << setw(12) << newPay << endl;
 	}
 
 	inFile.close();
