@@ -24,7 +24,7 @@ int main() {
 
 	while (input != "n") {
 		cout << "Rock! Paper! Scissors! Shoot!!!\n";
-		cout << "Choose an item (r, p, s, l, or p): ";
+		cout << "Choose an item (r, p, s, l, or k): ";
 		cin >> input;
 
 		int player = 0;
@@ -56,7 +56,7 @@ int main() {
 			continue;
 		}
 
-		cout << "The computer chose " << items[comp] << " ";
+		cout << "The computer chose " << items[comp] << "! ";
 
 		string result = "";
 		if (player == comp) {
