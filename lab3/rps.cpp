@@ -32,23 +32,23 @@ int main() {
 
 		switch (input) {
 			case "r":
-				cout >> "You chose rock!";
+				cout << "You chose rock!";
 				player = 0;
 				break;
 			case "p":
-				cout >> "You chose paper!";
+				cout << "You chose paper!";
 				player = 1;
 				break;
 			case "s":
-				cout >> "You chose scissors!";
+				cout << "You chose scissors!";
 				player = 2;
 				break;
 			case "l":
-				cout >> "You chose lizard!";
+				cout << "You chose lizard!";
 				player = 3;
 				break;
 			case "p":
-				cout >> "You chose spock!";
+				cout << "You chose spock!";
 				player = 4;
 				break;
 			default:
