@@ -28,33 +28,32 @@ int main() {
 		cin >> input;
 
 		int player = 0;
-		int comp = rand() % items.length;
+		int comp = rand() % items->length;
 
-		switch (input) {
-			case "r":
-				cout << "You chose rock!";
-				player = 0;
-				break;
-			case "p":
-				cout << "You chose paper!";
-				player = 1;
-				break;
-			case "s":
-				cout << "You chose scissors!";
-				player = 2;
-				break;
-			case "l":
-				cout << "You chose lizard!";
-				player = 3;
-				break;
-			case "p":
-				cout << "You chose spock!";
-				player = 4;
-				break;
-			default:
-				cout << "Invalid choice!";
-				continue;
-				break;
+		if (input == "r") {
+			cout << "You chose rock!";
+			player = 0;
+		}
+		else if (input == "p") {
+			cout << "You chose paper!";
+			player = 1;
+		}
+		else if (input == "s") {
+
+			cout << "You chose scissors!";
+			player = 2;
+		}
+		else if (input == "l") {
+			cout << "You chose lizard!";
+			player = 3;
+		}
+		else if (input == "k") {
+			cout << "You chose spock!";
+			player = 4;
+		}
+		else {
+			cout << "Invalid choice!";
+			continue;
 		}
 
 		cout << "The computer chose " << items[comp];
