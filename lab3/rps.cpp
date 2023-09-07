@@ -15,7 +15,7 @@
 using namespace std;
 
 int main() {
-	string[] items = { "scissors", "paper", "rock", "lizard", "spock" };
+	string items[] = {"scissors", "paper", "rock", "lizard", "spock"};
 	string input = "";
 
 	cout << "*** Welcome to Super RPS *** ";
