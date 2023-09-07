@@ -3,6 +3,10 @@
 #include <cstdlib>
 using namespace std;
 
+int rollDice() {
+	return rand() % 6 + 1;
+}
+
 int main() {
 	string input = "";
 	cout << "Would you like to play Dice (y or n)? ";
@@ -46,8 +50,4 @@ int main() {
 	}
 	cout << "Thanks for playing!\n";
 	return 0;
-}
-
-int rollDice() {
-	return rand() % 6 + 1;
 }
