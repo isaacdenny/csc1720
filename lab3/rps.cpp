@@ -22,7 +22,7 @@ int main() {
 	cout << "Would you like to play? (y or n)? ";
 	cin >> input;
 
-	while (input != "n" && input != "q") {
+	while (input != "n") {
 		cout << "Rock! Paper! Scissors! Shoot!!!\n";
 		cout << "Choose an item (r, p, s, l, or p): ";
 		cin >> input;
@@ -51,10 +51,6 @@ int main() {
 			cout << "You chose spock!";
 			player = 4;
 		}
-		else if (input == "q") {
-			cout << "You chose to quit!";
-			continue;
-		}
 		else {
 			cout << "Invalid choice!\n";
 			continue;
@@ -74,6 +70,8 @@ int main() {
 		}
 
 		cout << result;
+		cout << "Would you like to play again? (y or n)? ";
+		cin >> input;
 	}
 	cout << "Thanks for playing!\n";
 	return 0;
