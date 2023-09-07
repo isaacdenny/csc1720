@@ -47,6 +47,9 @@ int main() {
 		else {
 			result = "The computer wins!\n";
 		}
+		cout << result;
+		cout << "Would you like to play Dice (y or n)? ";
+		cin >> input;
 	}
 	cout << "Thanks for playing!\n";
 	return 0;
