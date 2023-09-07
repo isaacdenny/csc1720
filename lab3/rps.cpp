@@ -18,12 +18,12 @@ int main() {
 	string items[] = {"scissors", "paper", "rock", "lizard", "spock"};
 	string input = "";
 
-	cout << "*** Welcome to Super RPS *** ";
+	cout << "*** Welcome to Super RPS *** \n";
 	cout << "Would you like to play? (y or n)? ";
 	cin >> input;
 
 	while (input != "n") {
-		cout << "Rock! Paper! Scissors! Shoot!!!";
+		cout << "Rock! Paper! Scissors! Shoot!!!\n";
 		cout << "Choose an item (r, p, s, l, or p): ";
 		cin >> input;
 
@@ -32,7 +32,7 @@ int main() {
 
 		if (input == "r") {
 			cout << "You chose rock!";
-			player = 0;
+			player = 2;
 		}
 		else if (input == "p") {
 			cout << "You chose paper!";
@@ -41,7 +41,7 @@ int main() {
 		else if (input == "s") {
 
 			cout << "You chose scissors!";
-			player = 2;
+			player = 1;
 		}
 		else if (input == "l") {
 			cout << "You chose lizard!";
@@ -52,7 +52,7 @@ int main() {
 			player = 4;
 		}
 		else {
-			cout << "Invalid choice!";
+			cout << "Invalid choice!\n";
 			continue;
 		}
 
@@ -60,17 +60,17 @@ int main() {
 
 		string result = "";
 		if (player == comp) {
-			result = "It's a tie!";
+			result = "It's a tie!\n";
 		}
 		else if (player > comp) {
-			result = "The computer wins!";
+			result = "The computer wins!\n";
 		}
 		else if (player < comp) {
-			result = "You win!";
+			result = "You win!\n";
 		}
 
 		cout << result;
 	}
-	cout << "Thanks for playing!";
+	cout << "Thanks for playing!\n";
 	return 0;
 }
