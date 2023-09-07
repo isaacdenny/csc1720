@@ -67,7 +67,7 @@ int main() {
 			result = "The computer wins!";
 		}
 		else if (player < comp) {
-			result = "You win!"
+			result = "You win!";
 		}
 
 		cout << result;
