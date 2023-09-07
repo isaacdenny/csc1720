@@ -15,7 +15,7 @@
 using namespace std;
 
 int main() {
-	string items[] = {"scissors", "paper", "rock", "lizard", "spock"};
+	string items[] = { "scissors", "paper", "rock", "lizard", "spock" };
 	string input = "";
 
 	cout << "*** Welcome to Super RPS *** \n";
@@ -31,24 +31,24 @@ int main() {
 		int comp = rand() % 5;
 
 		if (input == "r") {
-			cout << "You chose rock!";
+			cout << "You chose rock! ";
 			player = 2;
 		}
 		else if (input == "p") {
-			cout << "You chose paper!";
+			cout << "You chose paper! ";
 			player = 1;
 		}
 		else if (input == "s") {
 
-			cout << "You chose scissors!";
-			player = 1;
+			cout << "You chose scissors! ";
+			player = 0;
 		}
 		else if (input == "l") {
-			cout << "You chose lizard!";
+			cout << "You chose lizard! ";
 			player = 3;
 		}
 		else if (input == "k") {
-			cout << "You chose spock!";
+			cout << "You chose spock! ";
 			player = 4;
 		}
 		else {
@@ -56,11 +56,23 @@ int main() {
 			continue;
 		}
 
-		cout << "The computer chose " << items[comp];
+		cout << "The computer chose " << items[comp] << " ";
 
 		string result = "";
 		if (player == comp) {
 			result = "It's a tie!\n";
+		}
+		else if (player - comp == -2) {
+			result = "The computer wins!\n";
+		}
+		else if (player - comp == 2) {
+			result = "You win!\n";
+		}
+		else if (player == 0 && comp == 4) {
+			result = "The computer wins!\n";
+		}
+		else if (player == 4 && comp == 0) {
+			result = "You win!\n";
 		}
 		else if (player > comp) {
 			result = "The computer wins!\n";
