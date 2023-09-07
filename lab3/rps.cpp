@@ -72,6 +72,6 @@ int main() {
 
 		cout << result;
 	}
-	cout << "Thanks for playing!"
+	cout << "Thanks for playing!";
 	return 0;
 }
