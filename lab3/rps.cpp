@@ -52,7 +52,7 @@ int main() {
 				player = 4;
 				break;
 			default:
-				cout >> "Invalid choice!";
+				cout << "Invalid choice!";
 				continue;
 				break;
 		}
