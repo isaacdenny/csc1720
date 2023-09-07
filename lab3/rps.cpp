@@ -28,7 +28,7 @@ int main() {
 		cin >> input;
 
 		int player = 0;
-		int comp = rand() % items->length;
+		int comp = rand() % items.size;
 
 		if (input == "r") {
 			cout << "You chose rock!";
