@@ -60,13 +60,13 @@ int main() {
 		cout << "The computer chose " << items[comp];
 
 		string result = "";
-		if (player == computer) {
+		if (player == comp) {
 			result = "It's a tie!";
 		}
-		else if (player > computer) {
+		else if (player > comp) {
 			result = "The computer wins!";
 		}
-		else if (player < computer) {
+		else if (player < comp) {
 			result = "You win!"
 		}
 
