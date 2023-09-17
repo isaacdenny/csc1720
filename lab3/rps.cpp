@@ -21,6 +21,11 @@ int main() {
 	cout << "*** Welcome to Super RPS *** \n";
 	cout << "Would you like to play? (y or n)? ";
 	cin >> input;
+	while (input != "n" && input != "y") {
+		cout << "Invalid input!";
+		cout << "Would you like to play? (y or n)? ";
+		cin >> input;
+	}
 
 	while (input != "n") {
 		cout << "Rock! Paper! Scissors! Shoot!!!\n";
@@ -84,6 +89,11 @@ int main() {
 		cout << result;
 		cout << "Would you like to play again? (y or n)? ";
 		cin >> input;
+		while (input != "n" && input != "y") {
+			cout << "Invalid input!";
+			cout << "Would you like to play? (y or n)? ";
+			cin >> input;
+		}
 	}
 	cout << "Thanks for playing!\n";
 	return 0;
