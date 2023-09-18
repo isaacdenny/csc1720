@@ -74,7 +74,7 @@ void lazyPrint(string toPrint, int time, bool endline) {
 	while (toPrint.length() > 0) {
 		cout << toPrint[0];
 		toPrint.erase(0, 1);
-		sleep(time / 10);
+		sleep(static_cast<int>(time / 100));
 	}
 	if (endline) {
 		cout << endl;
