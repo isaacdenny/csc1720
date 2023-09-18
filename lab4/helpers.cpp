@@ -70,7 +70,7 @@ void lazyPrint(string toPrint, int time, bool endline) {
 }
 #else
 void lazyPrint(string toPrint, int time, bool endline) {
-	time /= 1000;
+	time /= 100;
 	while (toPrint.length() > 0) {
 		cout << toPrint[0];
 		toPrint.erase(0, 1);
