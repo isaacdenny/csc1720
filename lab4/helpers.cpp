@@ -70,10 +70,9 @@ void lazyPrint(string toPrint, int time, bool endline) {
 }
 #else
 void lazyPrint(string toPrint, int time, bool endline) {
-	while (toPrint.length() > 0) {
-		usleep(time*1000);
-		cout << toPrint[0];
-		toPrint.erase(0, 1);
+	for (char c : toPrint) {
+		cout << c << flush; // Print the character and flush the buffer
+		this_thread::sleep_for(chrono::milliseconds(time));
 	}
 	if (endline) {
 		cout << endl;

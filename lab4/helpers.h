@@ -3,7 +3,8 @@
 #ifdef _WIN32
 #include <Windows.h>
 #else
-#include <unistd.h>
+#include <thread>
+#include <chrono> 
 #endif
 #include <string>
 #include <iostream>
