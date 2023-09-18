@@ -1,11 +1,7 @@
 #ifndef HELPERS_H
 #define HELPERS_H
-#ifdef _WIN32
-#include <Windows.h>
-#else
 #include <thread>
-#include <chrono> 
-#endif
+#include <chrono>
 #include <string>
 #include <iostream>
 #include <random>

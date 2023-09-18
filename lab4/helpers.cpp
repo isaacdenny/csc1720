@@ -57,18 +57,7 @@ string m_rAdd[12] = {
 	" with large open corridors. "
 };
 
-#ifdef _WIN32
-void lazyPrint(string toPrint, int time, bool endline) {
-	while (toPrint.length() > 0) {
-		cout << toPrint[0];
-		toPrint.erase(0, 1);
-		Sleep(time);
-	}
-	if (endline) {
-		cout << endl;
-	}
-}
-#else
+
 void lazyPrint(string toPrint, int time, bool endline) {
 	for (char c : toPrint) {
 		cout << c << flush; // Print the character and flush the buffer
@@ -78,7 +67,6 @@ void lazyPrint(string toPrint, int time, bool endline) {
 		cout << endl;
 	}
 }
-#endif
 
 string getRoomDesc() {
 	size_t nadj = sizeof(m_adjs) / sizeof(m_adjs[0]);
