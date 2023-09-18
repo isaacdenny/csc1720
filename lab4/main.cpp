@@ -5,8 +5,10 @@
  * Path: /home/students/idenny/csc1720/lab4/main.cpp
  * Description: This is Super RPS! Play against the computer.
  * Help received: None!
- * Compile: g++ -std=c++11 main.cpp Dungeon.cpp Room.cpp Player.cpp helpers.cpp Monster.cpp -o linearlabyrinth.exe
- * Execute: ./linearlabyrinth.exe
+ * Compile (Windows): g++ -std=c++11 main.cpp Dungeon.cpp Room.cpp Player.cpp helpers.cpp Monster.cpp -o linearlabyrinth.exe
+ * Execute (Windows): ./linearlabyrinth.exe
+ * Compile (Linux): g++ -std=c++11 main.cpp Dungeon.cpp Room.cpp Player.cpp helpers.cpp Monster.cpp -o linearlabyrinth.out
+ * Execute (Linux): ./linearlabyrinth.out
 *************/
 
 #include <fstream>
