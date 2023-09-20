@@ -38,18 +38,14 @@ int main(int argc, char* argv[]) {
 	while (input != 113) {
 		switch (input) {
 			case 109:
-				if (!isEndGame) {
+				if (!dungeon->getIsEndgame()) {
 					player->addGold((rand() % 5) + 3);
 					dungeon->moveNextRoom();
 					justEntered = true;
 				}
-
-				if (dungeon->getCurrentRoom()->getNextRoom() == nullptr) {
-					isEndGame = true;
-				}
 				break;
 			case 114:
-				if (isEndGame) {
+				if (dungeon->getIsEndgame()) {
 					finishGame(player, dungeon->getNumRooms());
 					return 0;
 				}
@@ -63,26 +59,25 @@ int main(int argc, char* argv[]) {
 				}
 				break;
 			case 99:
-				showCommands(isEndGame, hasReturned, player->getHasRested());
+				showCommands(dungeon->getIsEndgame(), hasReturned, player->getHasRested());
 				break;
 			case 115:
 				player->showStats();
 				break;
 			case 103:
-				if (isEndGame && player->getHasRested() && !hasReturned) {
+				if (dungeon->getIsEndgame() && player->getHasRested() && !hasReturned) {
 					dungeon->returnToRestRoom();
-					isEndGame = false;
 					justReturned = true;
 					hasReturned = true;
 				}
-				else if (!isEndGame) {
+				else if (!dungeon->getIsEndgame()) {
 					lazyPrint("Error, please enter a valid command!");
-					showCommands(isEndGame, hasReturned, player->getHasRested());
+					showCommands(dungeon->getIsEndgame(), hasReturned, player->getHasRested());
 				} // try to remove
 				break;
 			default:
 				lazyPrint("Error, please enter a valid command!");
-				showCommands(isEndGame, hasReturned, player->getHasRested());
+				showCommands(dungeon->getIsEndgame(), hasReturned, player->getHasRested());
 				break;
 		}
 
@@ -114,8 +109,8 @@ int main(int argc, char* argv[]) {
 		cout << endl;
 
 
-		if (isEndGame) {
-			showCommands(isEndGame, hasReturned, player->getHasRested());
+		if (dungeon->getIsEndgame()) {
+			showCommands(dungeon->getIsEndgame(), hasReturned, player->getHasRested());
 		}
 		lazyPrint(player->getName() + ", what will you do? [c]ommand list: ", 20, false);
 		cin >> input;

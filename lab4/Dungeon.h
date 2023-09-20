@@ -12,11 +12,13 @@ private:
 	float m_battleChance;
 	Room* m_currentRoom;
 	Room* m_restRoom;
+	bool m_isEndGame;
 public:
 	Dungeon();
 	void moveNextRoom();
 	int getNumRooms() { return m_numRooms; }
 	Room* getCurrentRoom() { return m_currentRoom; }
+	bool getIsEndgame() { return m_isEndGame; }
 	void setRestRoom();
 	void returnToRestRoom();
 	void startBattle(Player* p);

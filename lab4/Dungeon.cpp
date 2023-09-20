@@ -62,7 +62,7 @@ void Dungeon::startBattle(Player* p) {
 			case 114: 
 				lazyPrint("You ran from battle!");
 				lazyPrint("Behold," + m->getName() + " hit you as you ran...");
-				p->takeDamage(m->getStrength() % 5);
+				p->takeDamage((m->getStrength() % 5) + 1);
 				moveNextRoom();
 				return;
 				break;
@@ -102,10 +102,14 @@ void Dungeon::moveNextRoom() {
 	lazyPrint("You move on to the next room...", 20);
 	Room* r = m_currentRoom->getNextRoom();
 	m_currentRoom = r;
+	if (m_currentRoom->getNextRoom() == nullptr) {
+		m_isEndGame = true;
+	}
 }
 
 void Dungeon::returnToRestRoom() {
 	m_currentRoom = m_restRoom;
+	m_isEndGame = false;
 }
 
 void Dungeon::setRestRoom() {
