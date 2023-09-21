@@ -3,7 +3,7 @@
  * Course: CSC1720 Section 1
  * Date: September 17, 2023
  * Path: /home/students/idenny/csc1720/lab4/main.cpp
- * Description: This is Super RPS! Play against the computer.
+ * Description: The Linear Labyrinth is an ever-changing labyrinth with monsters and treasure!
  * Help received: None!
  * Compile (Windows): g++ -std=c++11 main.cpp Dungeon.cpp Room.cpp Player.cpp helpers.cpp Monster.cpp -o linearlabyrinth.exe
  * Execute (Windows): ./linearlabyrinth.exe
