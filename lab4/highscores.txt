@@ -10,3 +10,21 @@ Strength: 10
 Gold: 6
 Total Score: 3600
 
+Player name: isaac
+HP: -2
+Strength: 10
+Gold: 7
+Total Score: -700
+
+Player name: isaac
+HP: 12
+Strength: 20
+Gold: 13
+Total Score: 18720
+
+Player name: isaac
+HP: -12
+Strength: 10
+Gold: 4
+Total Score: -2400
+
