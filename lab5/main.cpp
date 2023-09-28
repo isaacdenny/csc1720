@@ -24,6 +24,7 @@ int main() {
 		if (isFirstLoop) {
 			cout << "Guess the word!" << endl;
 			cout << gb->getProgress() << endl;
+			cout << "You have " << gb->getGuessesLeft() << " guesses left!" << endl;
 			cout << "Enter your guess (One letter): ";
 			cin >> input;
 			cout << endl;
@@ -31,6 +32,7 @@ int main() {
 		}
 		if (input.length() != 1) {
 			cout << "Invalid input!";
+			cout << "You have " << gb->getGuessesLeft() << " guesses left!" << endl;
 			cout << "What is your guess? (One letter): ";
 			cin >> input;
 			continue;
@@ -48,6 +50,8 @@ int main() {
 		}
 		else {
 			cout << gb->getProgress() << endl;
+			cout << "You have " << gb->getGuessesLeft() << " guesses left!" << endl;
+			cout << "You have guessed: ";
 			cout << "What is your guess? (One letter): ";
 			cin >> input;
 		}

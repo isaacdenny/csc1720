@@ -19,7 +19,7 @@ bool Gameboard::guess(string guess)
 		cout << "You already guessed " + guess << endl;
 		return false;
 	}
-	m_guesses[m_i] = guess;
+	m_guesses->insert(guess);
 	m_i++;
 
 	size_t pos = 0;
@@ -27,6 +27,12 @@ bool Gameboard::guess(string guess)
 	if (pos == string::npos) {
 		cout << "There is no " + guess << endl;
 		m_guessesLeft--;
+		if (m_progress.find("-") == string::npos) {
+			m_hasWon = true;
+		}
+		else if (m_guessesLeft <= 0) {
+			m_hasLost = true;
+		}
 		return false;
 	}
 
@@ -48,11 +54,8 @@ bool Gameboard::guess(string guess)
 }
 
 bool Gameboard::hasGuessed(string guess) {
-	for (size_t i = 0; i < m_guesses->length(); i++)
-	{
-		if (m_guesses[i].compare(guess) == 0) {
-			return true;
-		}
+	if (m_guesses->count(guess) > 0) {
+		return true;
 	}
 	return false;
 }

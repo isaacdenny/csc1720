@@ -1,0 +1,8 @@
+Cheese 4.49 3
+Banana 1.25 5
+Toothbrush 2.99 1
+Pants 49.99 2
+Jetpack 67499.99 4
+Tape 0.99 10
+Tomato 1.23 7
+Asparagus 5.25
