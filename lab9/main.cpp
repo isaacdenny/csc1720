@@ -10,8 +10,8 @@ int main() {
 	deck.shuffle();
 	int money = 100;
 
-	while (true) {
-		string input = "";
+	string input = "";
+	while (input.compare("q")) {
 		int bet = 0;
 		cout << "\nWelcome to SummerCards!" << endl;
 		cout << "You have $" << money << endl;
@@ -30,7 +30,7 @@ int main() {
 			cin >> bet;
 		}
 		money -= bet;
-		int compBet = rand() % 50 + 1;
+		int compBet = bet;
 		cout << "The Computer bet " << compBet << endl;
 		int pot = bet + compBet;
 		
@@ -53,6 +53,10 @@ int main() {
 			}
 		}
 
+		cout << endl;
+		cout << "The computer got " << compVal << endl;
+		cout << "You got " << playerVal << endl;
+
 		if (playerVal == compVal) {
 			cout << "\nIt's a tie!" << endl;
 			money += bet;
@@ -65,6 +69,11 @@ int main() {
 		else {
 			cout << "\nYou win!" << endl;
 			money += pot;
+		}
+
+		if (money <= 0) {
+			input = "q";
+			cout << "You are out of money" << endl;
 		}
 	}
 	return 0;
